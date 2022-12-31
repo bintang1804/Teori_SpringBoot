@@ -491,9 +491,9 @@ Object Provider
 * [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/Aware.html] 
 
 ### Daftar Aware
-|-------------------------------------------------------------------|
+---------------------------------------------------------------------
 |Aware               	       | Keterangan                         |
-|-------------------------------------------------------------------|
+|------------------------------|------------------------------------|
 |ApplicationContextAware	   |Untuk mendapat application context  |
 |BeanFactoryAware	           |Untuk mendapat bean factory         |
 |BeanNameAware	               |Untuk mendapat nama bean            |
@@ -617,9 +617,9 @@ ApplicationEventPublisher, dimana ApplicationEventPublisher juga merupakan super
 * [https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/context/event/SpringApplicationEvent.html] 
  
 ### Daftar Event
-------------------------------------------------------------------------------------------------
-|Event	                            | Keterangan                                                |
 -------------------------------------------------------------------------------------------------
+|Event	                            | Keterangan                                                |
+|-----------------------------------|-----------------------------------------------------------|
 |ApplicationStartingEvent	        | Dikirim ketika start aplikasi                             |
 |ApplicationContextInitializedEvent	| Dikirim ketika ApplicationContext sudah di initialisasi   |
 |ApplicationStartedEvent	        | Dikirim ketika aplikasi sudah berjalan                    |
