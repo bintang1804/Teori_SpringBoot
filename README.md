@@ -211,7 +211,8 @@ Membuat Bean
 |session    | Dibuat baru per HTTP Session (hanya untuk Web App)    |
 |application| Dibuat baru per ServletContext (hanya untuk Web App)  |
 |websocket  | Dibuat baru per WebSocket (hanya untuk WebSocket App) |
---------------------------------------------------------------------- 
+
+
 * Kode : Scope Prototype
  
  
@@ -500,7 +501,6 @@ Object Provider
 |ApplicationEventPublisherAware|Untuk mendapat event publisher      |
 |EnvironmentAware	           |Untuk mendapat environment          |
 |dan lain-lain	...            |                                    |
---------------------------------------------------------------------- 
 
 * Code : Aware
 
@@ -617,7 +617,7 @@ ApplicationEventPublisher, dimana ApplicationEventPublisher juga merupakan super
 * [https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/context/event/SpringApplicationEvent.html] 
  
 ### Daftar Event
--------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 |Event	                            | Keterangan                                                |
 |-----------------------------------|-----------------------------------------------------------|
 |ApplicationStartingEvent	        | Dikirim ketika start aplikasi                             |
@@ -625,7 +625,7 @@ ApplicationEventPublisher, dimana ApplicationEventPublisher juga merupakan super
 |ApplicationStartedEvent	        | Dikirim ketika aplikasi sudah berjalan                    |
 |ApplicationFailedEvent	            | Dikirim ketika aplikasi gagal berjalan                    |
 |dan lain-lain	                    |                                                           |
--------------------------------------------------------------------------------------------------
+
 
 ### Menambah Listener
 * Beberapa Event di Spring Boot Application Event di trigger bahkan sebelum Spring membuat Application Context
