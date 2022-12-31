@@ -15,7 +15,7 @@
 * Spring Framework adalah framework paling populer di Java
 * Saking Populernya,Spring Framework sampai mengalahkan popularitas Java Enterprise sendiri
 * Spring Framework Semakin Populer karena sangat ringan dan mudah digunakan dibandingkan Java Enterprise
-* (Spring Framework)[https://spring.io/]
+* [https://spring.io/]
 
 ### Pengenalan Spring Boot
 * Spring Boot merupakan framework untuk mempermudah pembuatan aplikasi Spring Framework
@@ -37,4 +37,5 @@
 
 
 Link Video Youtube
-(TUTORIAL SPRING BOOT DASAR)[https://www.youtube.com/watch?v=VM3rwdMBORY]
+(TUTORIAL SPRING BOOT DASAR)
+[https://www.youtube.com/watch?v=VM3rwdMBORY]
