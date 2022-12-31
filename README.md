@@ -202,6 +202,7 @@ Membuat Bean
  
  
 ### Bean Scope
+------------------------------------------------------------------
 Scope   	Keterangan
 -----       -----------
 singleton	(Default) Hanya dibuat sekali dalam Spring IoC
@@ -210,7 +211,7 @@ request	    Dibuat baru per HTTP Request (hanya untuk Web App)
 session	    Dibuat baru per HTTP Session (hanya untuk Web App)
 application	Dibuat baru per ServletContext (hanya untuk Web App)
 websocket	Dibuat baru per WebSocket (hanya untuk WebSocket App)
- 
+------------------------------------------------------------------- 
 * Kode : Scope Prototype
  
  
@@ -490,9 +491,9 @@ Object Provider
 * [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/Aware.html] 
 
 ### Daftar Aware
-
+------------------------------------------------------------------
 Aware               	        Keterangan
------                           ----------
+-----------------------------   ----------------------------------
 
 ApplicationContextAware	        Untuk mendapat application context
 BeanFactoryAware	            Untuk mendapat bean factory
@@ -501,7 +502,7 @@ ApplicationEventPublisherAware	Untuk mendapat event publisher
 EnvironmentAware	            Untuk mendapat environment
 dan lain-lain	...
 Code : Aware
- 
+------------------------------------------------------------------- 
 * Kode : Mengakses Bean
  
  
@@ -615,6 +616,7 @@ ApplicationEventPublisher, dimana ApplicationEventPublisher juga merupakan super
 * [https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/context/event/SpringApplicationEvent.html] 
  
 ### Daftar Event
+-------------------------------------------------------------------------------------------
 Event	                            Keterangan
 ----------------------------------  -------------------------------------------------------
 ApplicationStartingEvent	        Dikirim ketika start aplikasi
@@ -622,6 +624,7 @@ ApplicationContextInitializedEvent	Dikirim ketika ApplicationContext sudah di in
 ApplicationStartedEvent	            Dikirim ketika aplikasi sudah berjalan
 ApplicationFailedEvent	                Dikirim ketika aplikasi gagal berjalan
 dan lain-lain	
+--------------------------------------------------------------------------------------------
 
 ### Menambah Listener
 * Beberapa Event di Spring Boot Application Event di trigger bahkan sebelum Spring membuat Application Context
