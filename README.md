@@ -50,7 +50,7 @@
 * Saat menggunakan framework IoC, kita biasanya akan mengikuti cara kerja framework tersebut
 Spring Inversion of Control
 * Spring bisa dibilang adalah framework IoC, dimana kita akan menyerahkan banyak sekali pekerjaan dalam program kita ke Spring
-* Kode program kita akan mengikuti cara kerja Spring
+* * Kode program kita akan mengikuti cara kerja Spring
 Diagram Inversion of Control
  
  
@@ -65,12 +65,12 @@ Configuration
 * Untuk membuat ApplicationContext menggunakan Annotation, pertama kita bisa perlu membuat Configuration class
 * Configuration Class adalah sebuah class yang terdapat annotation @Configuration pada class tersebut
 
-Kode : HelloWorldConfiguration
+* Kode : HelloWorldConfiguration
  
 Membuat Application Context
 * Selanjutnya, setelah membuat Class Configuration, kita bisa menggunakan class AnnotationConfigApplicationContext untuk membuat Application Context
 * [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/AnnotationConfigApplicationContext.html] 
-Kode : Membuat Application Context
+* Kode : Membuat Application Context
  
  
  
@@ -82,7 +82,7 @@ Membuat Singleton di Java
 * Cara yang paling sering digunakan adalah membuat class yang berisikan static method untuk membuat object dirinya sendiri
 * Selanjutnya constructor nya dibuat private, agar tidak bisa diakses dari luar
 * Sehingga user terpaksa menggunakan method static tersebut ketika ingin membuat object nya
-Kode : Singleton Class
+* Kode : Singleton Class
  
  
 ### Bean
@@ -93,30 +93,30 @@ Membuat Bean
 * Selanjutnya nama method tersebut akan menjadi nama bean nya, dan return object nya menjadi object bean nya
 * Method tersebut perlu kita tambahkan annotation @Bean, untuk menandakan bahwa itu adalah bean
 * Secara otomatis Spring akan mengeksekusi method tersebut, dan return value nya akan dijadikan object bean secara otomatis, dan disimpan di container IoC
-Kode : Membuat Bean
+* Kode : Membuat Bean
  
 ### Mengakses Bean
 * Setelah kita membuat bean, secara otomatis semua object akan di-manage oleh Application Context
 * Untuk mengakses bean, kita bisa menggunakan method getBean milik Application Context
-Kode : Mengakses Bean
+* Kode : Mengakses Bean
  
  
 ### Duplicate Bean
 * Di Spring, kita bisa mendaftarkan beberapa bean dengan tipe yang sama
 * Namun perlu diperhatikan, jika kita membuat bean dengan tipe data yang sama, maka kita harus menggunakan nama bean yang berbeda
 * Selain itu, saat kita mengakses bean nya, kita wajib menyebutkan nama bean nya, karena jika tidak, Spring akan bingung harus mengakses bean yang mana
-Kode : Duplicate Bean
+* Kode : Duplicate Bean
  
-Kode : Mengakses Duplicate Bean
+* Kode : Mengakses Duplicate Bean
  
  
 ### Primary Bean
 * Jika terjadi duplicate bean, selain kita sebSecarautkan nama bean nya ketika ingin mengakses bean nya, kita  juga bisa pilih salah satu bean menjadi primary
 * Dengan memilih salah satunya menjadi primary, secara otomatis jika kita mengakses bean tanpa menyebutkan nama bean nya, secara otomatis primary nya yang akan dipilih
 * Untuk memilih primary bean, kita bisa tambahkan annotaiton @Primary
-Kode : Primary Bean
+* Kode : Primary Bean
  
-Kode : Mengakses Primary Bean
+* Kode : Mengakses Primary Bean
  
  
 ### Mengubah Nama Bean
@@ -125,9 +125,9 @@ Kode : Mengakses Primary Bean
 * Saat project kita sudah besar, kadang bisa jadi nama method sama, walaupun isi bean nya berbeda, dan di Spring, nama bean itu unik, tidak boleh sama
 * Jika kita ingin mengubah nama bean, kita bisa menggunakan method value() milik annotation 
 @Bean
-Kode : Mengubah Nama Bean
+* Kode : Mengubah Nama Bean
  
-Kode : Mengakses Bean
+* Kode : Mengakses Bean
  
  
 ### Dependency Injection
@@ -141,9 +141,9 @@ Kode : Mengakses Bean
 * Sebenarnya tanpa Dependency Injection pun, kita tetap bisa membuat aplikasi
 * Namun ketika relasi antar dependencies sangat kompleks, agak ribet untuk kita melakukannya jika harus manual
 * Oleh karena itu, penggunaan Dependency Injection framework seperti Spring sangat membantu sekali
-Kode : Class FoorBar
+* Kode : Class FoorBar
  
-Kode : Tanpa Dependency Injection
+* Kode : Tanpa Dependency Injection
  
 #### Spring Dependency Injection
 * Spring sejak awal dikenal dengan framework untuk Dependency Injection
@@ -151,9 +151,9 @@ Kode : Tanpa Dependency Injection
 * Secara otomatis Spring akan mencarikan bean lain yang sesuai dengan tipe parameter tersebut
 * Jika ternyata tidak ada bean yang cocok, maka secara otomatis akan terjadi error
 * Dan jika ternyata terdapat bean lebih dari satu, secara otomatis akan terjadi error, kecuali terdapat primary bean
-Kode : Bean Dependency Injection
+* Kode : Bean Dependency Injection
  
-Kode : Menggunakan Dependency Injection
+* Kode : Menggunakan Dependency Injection
  
  
  
@@ -162,9 +162,9 @@ Kode : Menggunakan Dependency Injection
 * Saat terdapat duplicate bean dengan tipe data yang sama, secara otomatis Spring akan memilih bean yang primary
 * Namun kita juga bisa memilih secara manual jika memang kita inginkan
 * Kita bisa menggunakan annotation @Qualifier(value=”namaBean”) pada parameter di method nya
-Kode : Memilih Dependency
+* Kode : Memilih Dependency
  
-Kode : Mengakses Bean
+* Kode : Mengakses Bean
  
  
 #### Circular Dependencies
@@ -172,9 +172,9 @@ Kode : Mengakses Bean
 * Circular dependencies adalah kasus dimana sebuah lingkaran dependency terjadi, misal bean A membutuhkan bean B, bean B membutuhkan bean C, dan ternyata bean C membutuhkan A
 * Jika terjadi cyclic seperti ini, secara otomatis Spring bisa mendeteksinya, dan akan mengganggap bahwa itu adalah error
  
-Kode : Contoh Circular Configuration
+* Kode : Contoh Circular Configuration
  
-Kode : Error Circular Dependencies
+* Kode : Error Circular Dependencies
  
  
 ### Depends On
@@ -182,7 +182,7 @@ Kode : Error Circular Dependencies
 * Namun bagaimana jika bean tersebut tidak membutuhkan bean lain, namun kita ingin sebuah bean dibuat setelah bean lain dibuat?
 * Jika ada kasus seperti itu, kita bisa menggunakan annotation @DependsOn(value={”namaBean”})
 * Secara otomatis, Spring akan memprioritaskan pembuatan bean yang terdapat di DependsOn terlebih dahulu
-Kode : Depends On
+* Kode : Depends On
  
  
  
@@ -191,7 +191,7 @@ Kode : Depends On
 * Oleh karena itu, kadang ketika aplikasi Spring pertama berjalan akan sedikit lambat, hal ini dikarenakan semua bean akan dibuat di awal
 * Namun jika kita mau, kita juga bisa membuat sebuah bean menjadi lazy (malas), dimana bean tidak akan dibuat, sampai memang diakses atau dibutuhkan
 * Untuk membuat sebuah bean menjadi lazy, kita bisa tambahkan annotation @Lazy pada bean tersebut
-Kode : Lazy Bean
+* Kode : Lazy Bean
  
  
 ### Scope
@@ -211,10 +211,10 @@ session	    Dibuat baru per HTTP Session (hanya untuk Web App)
 application	Dibuat baru per ServletContext (hanya untuk Web App)
 websocket	Dibuat baru per WebSocket (hanya untuk WebSocket App)
  
-Kode : Scope Prototype
+* Kode : Scope Prototype
  
  
-Kode : Mengakses Bean
+* Kode : Mengakses Bean
  
  
  
@@ -224,11 +224,11 @@ Kode : Mengakses Bean
 * [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/config/Scope.html] 
 * Selanjutnya untuk meregistrasikannya, kita bisa membuat bean CustomScopeConfigurer
 * [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/config/CustomScopeConfigurer.html] 
-Kode : Doubleton Scope
+* Kode : Doubleton Scope
  
-Kode : Register Doubleton Scope
+* Kode : Register Doubleton Scope
  
-Kode : Mengakses Doubleton Bean
+* Kode : Mengakses Doubleton Bean
  
  
  
@@ -243,11 +243,11 @@ Life Cycle Callback
 * [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/InitializingBean.html]
 * DisposableBean digunakan jika kita ingin bereaksi ketika Spring akan menghancurkan bean
 * [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/DisposableBean.html] 
-Kode : Connection Class
+* Kode : Connection Class
  
-Kode : LifeCycle Configuration
+* Kode : LifeCycle Configuration
  
-Kode : Mengakses Connection
+* Kode : Mengakses Connection
  
  
  
@@ -257,11 +257,11 @@ Kode : Mengakses Connection
 * initMethod() digunakan untuk meregistrasikan method yang akan dipanggil ketika bean selesai dibuat
 * destroyMethod() digunakan untuk meregistrasikan method yang akan dipanggil ketika bean akan dihancurkan
 * Methodnya harus tanpa parameter, dan return value nya tidak akan dipedulikan, jadi sebaiknya gunakan void saja
-Kode : Server Class
+* Kode : Server Class
  
-Kode : Server Configuration
+* Kode : Server Configuration
  
-Kode : Mengakses Server
+* Kode : Mengakses Server
  
 @PostConstruct dan @PreDestroy
 * Selain menggunakan annotation @Bean, untuk menandai sebuah method adalah init method dan destroy method, kita juga bisa menggunakan annotation pada method nya secara langsung
@@ -269,7 +269,7 @@ Kode : Mengakses Server
 * @PostConstruct merupakan method yang ditandai harus dipanggil ketika bean selesai dibuat
 * @PreDestroy merupakan method yang ditandai harus dipanggil ketika bean akan dihancurkan
 * Jika sudah menggunakan annotation ini, kita tidak perlu lagi menyebutkan nya di @Bean
-Kode : Server Class
+* Kode : Server Class
  
  
  
@@ -280,11 +280,11 @@ Kode : Server Class
 * Kita bisa menggunakan annotation @Import, lalu sebutkan Configuration Class mana yang ingin kita import
 * Ketika kita melakukan import, kita bisa import lebih dari satu class
 * [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Import.html] 
-Kode : Foo dan Bar Configuration
+* Kode : Foo dan Bar Configuration
  
-Kode : Import Configuration
+* Kode : Import Configuration
  
-Kode : Mengakses Bean
+* Kode : Mengakses Bean
  
  
  
@@ -295,7 +295,7 @@ Kode : Mengakses Bean
 * Spring memiliki fitur component scan, dimana kita bisa secara otomatis mengimport Configuration di sebuah package dan sub package nya secara otomatis
 * Untuk melakukan itu, kita bisa gunakan annotation @ComponentScan
 * [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/ComponentScan.html]
-Kode : Component Scan
+* Kode : Component Scan
  
  
 ### Component
@@ -312,11 +312,11 @@ Kode : Component Scan
 Annotation
 * Semua annotation yang sudah kita bahas di @Bean juga didukung di @Component
 * Seperti misalnya @Scope, @PostConstruct, @PreDestroy, @Lazy, @Primary dan lain-lain
-Kode : Component
+* Kode : Component
  
-Kode : Component Configuration
+* Kode : Component Configuration
  
-Kode : Mengakses Component
+* Kode : Mengakses Component
  
  
 ### Dependency Injection
@@ -329,15 +329,15 @@ Kode : Mengakses Component
 * Kita bisa menambahkan constructor yang memiliki parameter jika membutuhkan bean lain
 * Secara otomatis Spring akan mencarikan bean tersebut, dan ketika membuat bean @Component, Spring akan menggunakan bean yang dibutuhkan di constructor
 * Constructor-based Dependency Injection hanya mendukung satu constructor, jadi pastikan kita hanya membuat satu constructor
-Kode : Constructor-based DI
+* Kode : Constructor-based DI
  
-Kode : Mengakses Bean
+* Kode : Mengakses Bean
  
 ### Multiple Constructor
 * Seperti di awal disebutkan bahwa Spring hanya mendukung satu constructor untuk Dependency Injection nya
 * Namun bagaimana jika terdapat multiple constructor?
 * Jika pada kasus seperti ini, kita harus menandai constructor mana yang akan digunakan oleh Spring *  Caranya kita bisa menggunakan annotation @Autowired
-Kode : Multiple Constructor
+* Kode : Multiple Constructor
  
  
  
@@ -346,9 +346,9 @@ Kode : Multiple Constructor
 * Namun khusus untuk setter method, kita perlu menambah annotation @Autowired pada setter method nya
 * Secara otomatis Spring akan mencari bean yang dibutuhkan di setter method yang memiliki annotation @Autowired
 * Setter-based DI juga bisa digabung dengan Constructor-based DI
-Kode : Settter-based DI
+* Kode : Settter-based DI
  
-Kode : Mengakses Bean
+* Kode : Mengakses Bean
  
  
 ### Field-based Dependency Injection
@@ -357,9 +357,9 @@ Kode : Mengakses Bean
 * Secara otomatis Spring akan mencari bean dengan tipe data tersebut
 * Field-based DI bisa digabung sekaligus dengan Setter-based DI dan Constructor-based DI
 * Khusus Field-based DI, Spring sendiri sudah tidak merekomendasikan penggunaan cara melakukan DI dengan Field
-Kode : Field-based DI
+* Kode : Field-based DI
  
-Kode : Mengakses Bean
+* Kode : Mengakses Bean
  
  
 ### Qualifier
@@ -369,13 +369,13 @@ Kode : Mengakses Bean
 * Kita bisa tambahkan @Qualifier di constructor parameter, di setter method atau di field
  
  
-Kode : Duplicate Bean
+* Kode : Duplicate Bean
  
  
-Kode : Menggunakan Qualifier
+* Kode : Menggunakan Qualifier
  
  
-Kode : Mengakses Bean
+* Kode : Mengakses Bean
  
  
  
@@ -386,19 +386,19 @@ Kode : Mengakses Bean
 * Kita bisa wrap dependency tersebut dengan menggunakan java.util.Optional<T>
 * Secara otomatis jika ternyata bean yang dibutuhkan tidak ada, maka tidak akan terjadi error
 * Kita bisa gunakan Optional<T> pada @Bean (method parameter) ataupun @Component (constructor parameter, setter method parameter, field)
-Kode : Optional Configuration
+* Kode : Optional Configuration
  
-Kode : Mengakses Bean
+* Kode : Mengakses Bean
  
 Object Provider
 * Selain menggunakan java.util.Optional<T>, kita juga bisa menggunakan ObjectProvider<T>
 * Yang membedakan pada ObjectProvider<T> adalah, jika ternyata bean nya lebih dari satu, ObjectProvider<T> bisa digunakan untuk mengambil semua bean tersebut
 * [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/ObjectProvider.html]
-Kode : Object Provider
+* Kode : Object Provider
  
-Kode : Optional Configuration
+* Kode : Optional Configuration
  
-Kode : Mengakses Bean
+* Kode : Mengakses Bean
  
  
  
@@ -408,13 +408,13 @@ Kode : Mengakses Bean
 * Pada kasus seperti ini, cara terbaik untuk membuat bean nya adalah dengan menggunakan @Bean method
 * Atau di Spring, kita juga bisa menggunakan @Component, namun kita perlu wrap dalam class Factory Bean
 * [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/FactoryBean.html] 
-Kode : Payment Gateway Client
+* Kode : Payment Gateway Client
  
-Kode : Factory Bean
+* Kode : Factory Bean
  
-Kode : Configuration
+* Kode : Configuration
  
-Kode : Mengakses Bean
+* Kode : Mengakses Bean
  
  
  
@@ -422,12 +422,12 @@ Kode : Mengakses Bean
 * Saat kita mengakses bean, kita bisa langsung menyebutkan tipe class bean tersebut, atau bisa juga dengan parent class / parent interface bean
 * Misal jika kita memiliki sebuah interface bernama MerchantService, lalu kita memiliki bean dengan object implementasi class nya MerchantServiceImpl, maka untuk mengakses bean nya, kita tidak hanya bisa menggunakan tipe MerchantServiceImpl, namun juga bisa dengan MerchantService
 * Namun perlu berhati-hati, jika misal MerchantService memiliki banyak bean turunan, pastikan tidak terjadi error duplicate
-Kode : MerchantService
+* Kode : MerchantService
  
  
-Kode : Configuration
+* Kode : Configuration
  
-Kode : Mengakses Bean
+* Kode : Mengakses Bean
  
  
  
@@ -443,7 +443,7 @@ Kode : Mengakses Bean
 * Dalam beberapa kasus, ini sangat berguna, seperti misal kita ingin mengambil semua bean dengan tipe tertentu
 * Application Context juga merupakan turunan dari interface Listable Bean Factory
 * [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/ListableBeanFactory.html]
-Kode : Menggunakan Listable Bean Factory
+* Kode : Menggunakan Listable Bean Factory
  
  
 ### Bean Post Processor
@@ -456,13 +456,13 @@ Kode : Menggunakan Listable Bean Factory
 * Misal sekarang kita akan coba membuat id unique untuk bean
 * Dimana kita akan membuat sebuah interface bernama IdAware, lalu memiliki method setId(String)
 * Kita akan membuat Bean Post Processor, dimana jika bean nya implements IdAware, kita akan setId(String) nya menggunakan UUID
-Kode : IdAware Interface
+* Kode : IdAware Interface
  
-Kode : Bean Post Processor
+* Kode : Bean Post Processor
  
-Kode : Component
+* Kode : Component
  
-Kode : Mengakses Bean
+* Kode : Mengakses Bean
  
  
  
@@ -472,13 +472,13 @@ Kode : Mengakses Bean
 * Sayangnya secara default, Spring tidak menjamin urutan eksekusi nya
 * Agar kita bisa menentukan urutannya, kita bisa menggunakan interface Ordered
 * [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/core/Ordered.html] 
-Kode : Id Aware
+* Kode : Id Aware
  
-Kode : Id Generator
+* Kode : Id Generator
  
-Kode : Prefix Id Generator
+* Kode : Prefix Id Generator
  
-Kode : Mengakses Bean
+* Kode : Mengakses Bean
  
   
 ### Aware
@@ -502,7 +502,7 @@ EnvironmentAware	            Untuk mendapat environment
 dan lain-lain	...
 Code : Aware
  
-Kode : Mengakses Bean
+* Kode : Mengakses Bean
  
  
  
@@ -512,9 +512,9 @@ Kode : Mengakses Bean
 * Spring merekomendasikan kita untuk membuat Bean Factory Post Processor
 * [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/config/BeanFactoryPostProcessor.html] 
 * [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/support/]BeanDefinitionRegistryPostProcessor.html 
-Kode : Bean Factory Post Processor
+* Kode : Bean Factory Post Processor
  
-Kode : Mengakses Bean
+* Kode : Mengakses Bean
  
  
 ### Event Listener
@@ -528,13 +528,13 @@ Kode : Mengakses Bean
 ApplicationEventPublisher, dimana ApplicationEventPublisher juga merupakan super interface dari ApplicationContext
 * Atau kita bisa menggunakan ApplicationEventPublisherAware untuk mendapatkan object ApplicationEventPublishe
 * [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/ApplicationEventPublisher.html]
-Kode : Event
+* Kode : Event
  
-Kode : Listener
+* Kode : Listener
  
-Kode : Mengirim Event
+* Kode : Mengirim Event
  
-Kode : Mengakses Bean
+* Kode : Mengakses Bean
  
  
  
@@ -543,7 +543,7 @@ Kode : Mengakses Bean
 * Ini lebih flexible dibanding menggunakan interface ApplicationListener
 * Kita bisa menggunakan annotation @EventListener
 * [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/event/EventListener.html]
-Kode : Event Listener Annotation
+* Kode : Event Listener Annotation
  
 ### Cara Kerja Event Listener Annotation?
 * Annotation @EventListener bekerja dengan menggunakan Bean Post Processor bernama EventListenerMethodProcessor
@@ -557,20 +557,20 @@ Kode : Event Listener Annotation
 * Isi dari @SpringBootApplication itu sendiri sebenarnya gabungan dari @Configuration dan banyak hal lain, seperti contohnya @ComponentScan
 * [https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/SpringBootApplication.html] 
  
-Kode : Foo Application
+* Kode : Foo Application
  
 ### Spring Application
 * Selain @SpringBootApplication, untuk membuat Application Context nya, kita tidak perlu membuat manual, kita bisa gunakan class SpringApplication
 * Secara otomatis SpringApplication akan membuat ApplicationContext dan melakukan hal-hal yang dibutuhkan secara otomatis
 * [https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/SpringApplication.html] 
-Kode : Spring Application
+* Kode : Spring Application
  
 ### Spring Boot Test
 * Untuk membuat unit test di Spring Boot, kita bisa menggunakan annotation 
 @SpringBootTest(classes={YourConfiguration.class})
 * Selanjutnya kita tidak perlu mengambil bean secara manual lagi menggunakan ApplicationContext, kita bisa menggunakan DI secara langsung di unit test nya menggunakan @Autowired
 * [https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/context/SpringBootTest.html]
-Kode : Test Foo Application
+* Kode : Test Foo Application
  
  
  
@@ -579,11 +579,11 @@ Kode : Test Foo Application
 * FailureAnalyzer digunakan untuk melakukan analisa ketika terjadi error startup yang menyebabkan aplikasi tidak mau berjalan
 * Spring sudah menyediakan banyak sekali class implementasi FailureAnalyzer yang bisa mempermudah kita menganalisa kesalaha ketika terjadi startup failure
 * [https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/diagnostics/FailureAnalyzer.html]
-Kode : Error Configuration
+* Kode : Error Configuration
  
-Kode : Tanpa Spring Boot
+* Kode : Tanpa Spring Boot
  
-Kode : Dengan Spring Boot
+* Kode : Dengan Spring Boot
  
  
  
@@ -592,11 +592,11 @@ Kode : Dengan Spring Boot
 * Secara default fitur banner ini akan menyala dan akan mencari tulisan banner di classpath dengan nama banner.txt
 * Jika tidak ada file tersebut, maka secara otomatis akan menampilkan tulisan banner Spring Boot
 * Salah satu contoh tempat untuk membuat banner adalah [http://www.bagill.com/ascii-sig.php]
-Kode : Default Banner
+* Kode : Default Banner
  
-Kode : banner.txt
+* Kode : banner.txt
  
-Kode : Hasil Banner
+* Kode : Hasil Banner
  
  
  
@@ -605,7 +605,7 @@ Kode : Hasil Banner
 * [https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/SpringApplication.html]
 * Kita bisa menggunakan langsung SpringApplication, atau bisa juga menggunakan SpringApplicationBuilder
 * [https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/builder/SpringApplicationBuilder.html]
-Kode : Customizing Spring Application
+* Kode : Customizing Spring Application
  
  
 ### Spring Application Event
@@ -627,9 +627,10 @@ dan lain-lain
 * Beberapa Event di Spring Boot Application Event di trigger bahkan sebelum Spring membuat Application Context
 * Oleh karena itu, jika kita buat menggunakan bean, bisa saja beberapa listener tidak akan dipanggil, karena bean nya belum dibuat
 * Agar lebih aman, kita bisa menambahkan listener ketika membuat SpringApplication 
-Kode : Contoh Listener
+
+* Kode : Contoh Listener
  
-Kode : Menambah Listener
+* Kode : Menambah Listener
  
  
  
@@ -639,7 +640,7 @@ Kode : Menambah Listener
 * Kita hanya butuh membuat bean dari CommandLineRunner
 * CommandLineRunner secara otomatis akan di jalankan ketika Spring Application berjalan
 * [https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/CommandLineRunner.html] 
-Kode : Contoh Command Line Runner
+* Kode : Contoh Command Line Runner
  
  
  
@@ -649,7 +650,7 @@ Kode : Contoh Command Line Runner
 * Yang menarik dari ApplicationArguments adalah, memiliki fitur parsing untuk command line argument
 * [https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/ApplicationArguments.html]
 * [https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/ApplicationRunner.html] 
-### Kode : Application Runner
+* Kode : Application Runner
  
  
 ### Spring Boot Plugin
