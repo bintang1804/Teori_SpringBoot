@@ -202,16 +202,16 @@ Membuat Bean
  
  
 ### Bean Scope
-------------------------------------------------------------------
-Scope   	Keterangan
------       -----------
-singleton	(Default) Hanya dibuat sekali dalam Spring IoC
-prototype	Selalu dibuat object baru setiap kali bean diakses
-request	    Dibuat baru per HTTP Request (hanya untuk Web App)
-session	    Dibuat baru per HTTP Session (hanya untuk Web App)
-application	Dibuat baru per ServletContext (hanya untuk Web App)
-websocket	Dibuat baru per WebSocket (hanya untuk WebSocket App)
-------------------------------------------------------------------- 
+---------------------------------------------------------------------
+|Scope   	| Keterangan                                            |
+------------|-------------------------------------------------------|
+|singleton	| (Default) Hanya dibuat sekali dalam Spring IoC        |
+|prototype	| Selalu dibuat object baru setiap kali bean diakses    |
+|request    | Dibuat baru per HTTP Request (hanya untuk Web App)    |
+|session    | Dibuat baru per HTTP Session (hanya untuk Web App)    |
+|application| Dibuat baru per ServletContext (hanya untuk Web App)  |
+|websocket  | Dibuat baru per WebSocket (hanya untuk WebSocket App) |
+--------------------------------------------------------------------- 
 * Kode : Scope Prototype
  
  
