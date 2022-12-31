@@ -204,7 +204,7 @@ Membuat Bean
 ### Bean Scope
 ---------------------------------------------------------------------
 |Scope   	| Keterangan                                            |
-------------|-------------------------------------------------------|
+|-----------|-------------------------------------------------------|
 |singleton	| (Default) Hanya dibuat sekali dalam Spring IoC        |
 |prototype	| Selalu dibuat object baru setiap kali bean diakses    |
 |request    | Dibuat baru per HTTP Request (hanya untuk Web App)    |
@@ -491,18 +491,19 @@ Object Provider
 * [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/Aware.html] 
 
 ### Daftar Aware
-------------------------------------------------------------------
-Aware               	        Keterangan
------------------------------   ----------------------------------
+|-------------------------------------------------------------------|
+|Aware               	       | Keterangan                         |
+|-------------------------------------------------------------------|
+|ApplicationContextAware	   |Untuk mendapat application context  |
+|BeanFactoryAware	           |Untuk mendapat bean factory         |
+|BeanNameAware	               |Untuk mendapat nama bean            |
+|ApplicationEventPublisherAware|Untuk mendapat event publisher      |
+|EnvironmentAware	           |Untuk mendapat environment          |
+|dan lain-lain	...            |                                    |
+--------------------------------------------------------------------- 
 
-ApplicationContextAware	        Untuk mendapat application context
-BeanFactoryAware	            Untuk mendapat bean factory
-BeanNameAware	                Untuk mendapat nama bean
-ApplicationEventPublisherAware	Untuk mendapat event publisher
-EnvironmentAware	            Untuk mendapat environment
-dan lain-lain	...
-Code : Aware
-------------------------------------------------------------------- 
+* Code : Aware
+
 * Kode : Mengakses Bean
  
  
@@ -616,15 +617,15 @@ ApplicationEventPublisher, dimana ApplicationEventPublisher juga merupakan super
 * [https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/context/event/SpringApplicationEvent.html] 
  
 ### Daftar Event
--------------------------------------------------------------------------------------------
-Event	                            Keterangan
-----------------------------------  -------------------------------------------------------
-ApplicationStartingEvent	        Dikirim ketika start aplikasi
-ApplicationContextInitializedEvent	Dikirim ketika ApplicationContext sudah di initialisasi
-ApplicationStartedEvent	            Dikirim ketika aplikasi sudah berjalan
-ApplicationFailedEvent	                Dikirim ketika aplikasi gagal berjalan
-dan lain-lain	
---------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+|Event	                            | Keterangan                                                |
+-------------------------------------------------------------------------------------------------
+|ApplicationStartingEvent	        | Dikirim ketika start aplikasi                             |
+|ApplicationContextInitializedEvent	| Dikirim ketika ApplicationContext sudah di initialisasi   |
+|ApplicationStartedEvent	        | Dikirim ketika aplikasi sudah berjalan                    |
+|ApplicationFailedEvent	            | Dikirim ketika aplikasi gagal berjalan                    |
+|dan lain-lain	                    |                                                           |
+-------------------------------------------------------------------------------------------------
 
 ### Menambah Listener
 * Beberapa Event di Spring Boot Application Event di trigger bahkan sebelum Spring membuat Application Context
