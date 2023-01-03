@@ -10,8 +10,6 @@ Membuat Bean
 
 ![Img 1](image/Bean.PNG)
 
-* Penjelasannya :
-
  
 ### Mengakses Bean
 * Setelah kita membuat bean, secara otomatis semua object akan di-manage oleh Application Context
@@ -25,6 +23,8 @@ Membuat Bean
 * Selain itu, saat kita mengakses bean nya, kita wajib menyebutkan nama bean nya, karena jika tidak, Spring akan bingung harus mengakses bean yang mana
 * Kode : Duplicate Bean
  
+ ![Img 1](image/BeanDuplicate.PNG)
+
 * Kode : Mengakses Duplicate Bean
  
  
@@ -33,6 +33,8 @@ Membuat Bean
 * Dengan memilih salah satunya menjadi primary, secara otomatis jika kita mengakses bean tanpa menyebutkan nama bean nya, secara otomatis primary nya yang akan dipilih
 * Untuk memilih primary bean, kita bisa tambahkan annotaiton @Primary
 * Kode : Primary Bean
+ ![Img 1](image/BeanPrimary.PNG)
+
  
 * Kode : Mengakses Primary Bean
  
@@ -44,11 +46,77 @@ Membuat Bean
 * Jika kita ingin mengubah nama bean, kita bisa menggunakan method value() milik annotation 
 @Bean
 * Kode : Mengubah Nama Bean
+ ![Img 1](image/BeanChangeName.PNG)
  
 * Kode : Mengakses Bean
  
 
 
+ 
+### Factory Bean
+* Kadang ada kasus dimana sebuah class misal bukanlah milik kita, misal class third party library
+* Sehingga agak sulit jika kita harus menambahkan annotation pada class tersebut
+* Pada kasus seperti ini, cara terbaik untuk membuat bean nya adalah dengan menggunakan @Bean method
+* Atau di Spring, kita juga bisa menggunakan @Component, namun kita perlu wrap dalam class Factory Bean
+* [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/FactoryBean.html] 
+* Kode : Payment Gateway Client
+ 
+* Kode : Factory Bean
+ 
+* Kode : Configuration
+ 
+* Kode : Mengakses Bean
+ 
+ 
+ 
+ 
+ 
+### Bean Factory
+* ApplicationContext adalah interface turunan dari BeanFactory
+* BeanFactory merupakan kontrak untuk management bean di Spring
+* Method-method yang sebelumnya kita gunakan untuk mengambil bean, sebenarnya merupakan method kontrak dari interface BeanFactory
+* [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/BeanFactory.html]
+
+### Listable Bean Factory
+* Bean Factory hanya bisa digunakan untuk mengakses single bean, artinya jika terdapat bean dengan tipe yang sama, kita harus sebutkan satu per satu nama bean nya
+* Listable Bean Factory adalah turunan dari Bean Factory yang bisa kita gunakan untuk mengakses beberapa bean sekaligus
+* Dalam beberapa kasus, ini sangat berguna, seperti misal kita ingin mengambil semua bean dengan tipe tertentu
+* Application Context juga merupakan turunan dari interface Listable Bean Factory
+* [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/ListableBeanFactory.html]
+* Kode : Menggunakan Listable Bean Factory
+ 
+ 
+### Bean Post Processor
+* Bean Post Processor merupakan sebuah interface yang bisa kita gunakan untuk memodifikasi proses pembuatan bean di Application Context
+* Bean Post Processor mirip seperti middleware, yang diakses sebelum bean di initialized dan setelah bean di initialized
+* Karena sangat flexible, bahkan Bean Post Processor bisa memodifikasi hasil object bean
+* [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/config/BeanPostProcessor.html] 
+ 
+### Bean Id Generator
+* Misal sekarang kita akan coba membuat id unique untuk bean
+* Dimana kita akan membuat sebuah interface bernama IdAware, lalu memiliki method setId(String)
+* Kita akan membuat Bean Post Processor, dimana jika bean nya implements IdAware, kita akan setId(String) nya menggunakan UUID
+* Kode : IdAware Interface
+ 
+* Kode : Bean Post Processor
+ 
+* Kode : Component
+ 
+* Kode : Mengakses Bean
+ 
+ 
+ 
+ 
+ 
+### Bean Factory Post Processor
+* Secara default, mungkin kita tidak akan pernah sama sekali membuat Application Context secara manual
+* Namun kadang ada keadaan kita ingin memodifikasi secara internal Application Context
+* Spring merekomendasikan kita untuk membuat Bean Factory Post Processor
+* [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/config/BeanFactoryPostProcessor.html] 
+* [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/support/]BeanDefinitionRegistryPostProcessor.html 
+* Kode : Bean Factory Post Processor
+ 
+* Kode : Mengakses Bean
  
 ### Link Video Youtube
 #### (TUTORIAL SPRING BOOT DASAR)

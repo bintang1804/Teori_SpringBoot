@@ -4,9 +4,6 @@ Membuat Application Context
 * Kode : Membuat Application Context
 ![Img 1](image/9.PNG)
 
-* Penjelasannya :
-
-
 
  
 ### Link Video Youtube

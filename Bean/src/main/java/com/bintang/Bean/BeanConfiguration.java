@@ -4,8 +4,11 @@
  */
 package com.bintang.Bean;
 
+import java.util.function.Supplier;
+import org.junit.jupiter.api.Assertions;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import static org.springframework.web.server.adapter.WebHttpHandlerBuilder.applicationContext;
 
 /**
  *
@@ -19,6 +22,7 @@ public class BeanConfiguration {
         Foo foo = new Foo();
         return foo;
     }
+    
     
 
 }

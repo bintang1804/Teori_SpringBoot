@@ -11,9 +11,6 @@ Membuat Singleton di Java
 
 ![Img 1](image/Singleton.PNG)
 
-* Penjelasannya :
-
-
 
  
 ### Link Video Youtube

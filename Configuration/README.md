@@ -6,8 +6,6 @@ Configuration
 
 ![Img 1](image/8.PNG)
 
-* Penjelasannya :
-
 
 
  
