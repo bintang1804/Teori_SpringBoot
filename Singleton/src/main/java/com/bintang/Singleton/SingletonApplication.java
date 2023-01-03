@@ -1,16 +1,13 @@
-package com.bintang.Configuration;
+package com.bintang.Singleton;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ConfigurationApplication {
+public class SingletonApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ConfigurationApplication.class, args);
+		SpringApplication.run(SingletonApplication.class, args);
 	}
-
-
-	
 
 }
