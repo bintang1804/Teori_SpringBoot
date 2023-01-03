@@ -3,6 +3,7 @@ Configuration
 * Configuration Class adalah sebuah class yang terdapat annotation @Configuration pada class tersebut
 
 * Kode : HelloWorldConfiguration
+
 ![Img 1](image/8.PNG)
 
 * Penjelasannya :
