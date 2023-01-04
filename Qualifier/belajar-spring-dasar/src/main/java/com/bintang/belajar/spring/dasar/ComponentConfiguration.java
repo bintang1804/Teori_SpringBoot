@@ -7,9 +7,9 @@ import com.bintang.belajar.spring.dasar.data.MultiFoo;
 
 @Configuration
 @ComponentScan(basePackages = {
-    "programmerzamannow.spring.core.repository",
-    "programmerzamannow.spring.core.service",
-    "programmerzamannow.spring.core.configuration",
+    "com.bintang.belajar.spring.dasar.repository",
+    "com.bintang.belajar.spring.dasar.service",
+    "com.bintang.belajar.spring.dasar.configuration",
 })
 @Import(MultiFoo.class)
 public class ComponentConfiguration {
