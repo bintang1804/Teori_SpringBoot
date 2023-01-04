@@ -39,6 +39,7 @@ Membuat Bean
  
 * Kode : Mengakses Primary Bean
  
+ ![Img 1](image/aksesPrimaryBean.PNG)
  
 ### Mengubah Nama Bean
 * Secara default, nama bean diambil dari nama method
@@ -142,7 +143,7 @@ Membuat Bean
 
 * Kode : Mengakses Bean
 
-![Img 1](image/BeanAkses3.PNG)
+![Img 1](image/BenAkses3.PNG)
  
 ### Link Video Youtube
 #### (TUTORIAL SPRING BOOT DASAR)
