@@ -8,6 +8,8 @@
 * [https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/CommandLineRunner.html] 
 * Kode : Contoh Command Line Runner
  
+ ![Img 1](image/commandLineRunner.PNG)
+ 
  
  
 ### Application Runner
@@ -18,3 +20,5 @@
 * [https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/ApplicationRunner.html] 
 * Kode : Application Runner
  
+
+ ![Img 1](image/applicationRunner.PNG)

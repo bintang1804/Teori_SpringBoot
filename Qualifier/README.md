@@ -7,10 +7,18 @@
  
  
 * Kode : Duplicate Bean
+
+![Img 1](image/DuplicateBean.PNG)
+ 
  
  
 * Kode : Menggunakan Qualifier
  
+ ![Img 1](image/MenggunakanQualifier.PNG)
  
+  
 * Kode : Mengakses Bean
+ 
+ ![Img 1](image/aksesBean.PNG)
+ 
  

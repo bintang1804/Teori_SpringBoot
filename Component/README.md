@@ -25,7 +25,13 @@ Annotation
 * Semua annotation yang sudah kita bahas di @Bean juga didukung di @Component
 * Seperti misalnya @Scope, @PostConstruct, @PreDestroy, @Lazy, @Primary dan lain-lain
 * Kode : Component
+
+![Img 1](image/component.PNG)
  
 * Kode : Component Configuration
+
+![Img 1](image/componentt.PNG)
  
 * Kode : Mengakses Component
+
+![Img 1](image/aksesComponent.PNG)

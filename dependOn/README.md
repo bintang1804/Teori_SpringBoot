@@ -4,3 +4,7 @@
 * Jika ada kasus seperti itu, kita bisa menggunakan annotation @DependsOn(value={”namaBean”})
 * Secara otomatis, Spring akan memprioritaskan pembuatan bean yang terdapat di DependsOn terlebih dahulu
 * Kode : Depends On
+
+
+![Img 1](image/dependOn.PNG)
+ 

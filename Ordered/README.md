@@ -7,9 +7,21 @@
 * [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/core/Ordered.html] 
 * Kode : Id Aware
  
+![Img 1](image/idAware.PNG)
+ 
+
 * Kode : Id Generator
+
+![Img 1](image/idGenerator.PNG)
+ 
  
 * Kode : Prefix Id Generator
+
+![Img 1](image/PrefixIdGenerator.PNG)
+ 
  
 * Kode : Mengakses Bean
+
+![Img 1](image/AksesBean.PNG)
+ 
  

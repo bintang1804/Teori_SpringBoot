@@ -10,6 +10,10 @@
  
 * Kode : Import Configuration
  
+![Img 1](image/importconfiguration.PNG)
+ 
+
 * Kode : Mengakses Bean
  
+![Img 1](image/aksesImportconfiguration.PNG)
  

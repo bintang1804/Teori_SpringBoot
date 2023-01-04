@@ -6,3 +6,6 @@
 * Namun jika kita mau, kita juga bisa membuat sebuah bean menjadi lazy (malas), dimana bean tidak akan dibuat, sampai memang diakses atau dibutuhkan
 * Untuk membuat sebuah bean menjadi lazy, kita bisa tambahkan annotation @Lazy pada bean tersebut
 * Kode : Lazy Bean
+
+![Img 1](image/lazyBean.PNG)
+ 

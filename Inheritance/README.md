@@ -6,7 +6,15 @@
 * Namun perlu berhati-hati, jika misal MerchantService memiliki banyak bean turunan, pastikan tidak terjadi error duplicate
 * Kode : MerchantService
  
+![Img 1](image/MerchantService.PNG)
  
+
 * Kode : Configuration
+
+![Img 1](image/Configuration.PNG)
+ 
  
 * Kode : Mengakses Bean
+
+![Img 1](image/aksesBean.PNG)
+ 

@@ -3,3 +3,5 @@
 * Namun bagaimana jika terdapat multiple constructor?
 * Jika pada kasus seperti ini, kita harus menandai constructor mana yang akan digunakan oleh Spring *  Caranya kita bisa menggunakan annotation @Autowired
 * Kode : Multiple Constructor
+
+![Img 1](image/constructor.PNG)
