@@ -7,7 +7,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import com.bintang.belajar.spring.dasar.service.AuthService;
+import programmerzamannow.spring.core.service.AuthService;
 
 public class AwareTest {
 

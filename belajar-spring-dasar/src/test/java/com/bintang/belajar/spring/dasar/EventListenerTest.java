@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Import;
 import com.bintang.belajar.spring.dasar.listener.LoginAgainSuccessListener;
 import com.bintang.belajar.spring.dasar.listener.LoginSuccessListener;
 import com.bintang.belajar.spring.dasar.listener.UserListener;
-import com.bintang.belajar.spring.dasar.service.UserService;
+import programmerzamannow.spring.core.service.UserService;
 
 public class EventListenerTest {
 

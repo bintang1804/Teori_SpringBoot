@@ -5,6 +5,12 @@
 * Salah satu contoh tempat untuk membuat banner adalah [http://www.bagill.com/ascii-sig.php]
 * Kode : Default Banner
  
+![Img 1](image/default.PNG)
+
 * Kode : banner.txt
+
+![Img 1](image/banner.PNG)
  
 * Kode : Hasil Banner
+
+![Img 1](image/hasil.PNG)

@@ -7,12 +7,12 @@ import org.junit.jupiter.api.Test;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import com.bintang.belajar.spring.dasar.data.MultiFoo;
-import com.bintang.belajar.spring.dasar.repository.CategoryRepository;
-import com.bintang.belajar.spring.dasar.repository.CustomerRepository;
-import com.bintang.belajar.spring.dasar.repository.ProductRepository;
-import com.bintang.belajar.spring.dasar.service.CategoryService;
-import com.bintang.belajar.spring.dasar.service.CustomerService;
-import com.bintang.belajar.spring.dasar.service.ProductService;
+import programmerzamannow.spring.core.repository.CategoryRepository;
+import programmerzamannow.spring.core.repository.CustomerRepository;
+import programmerzamannow.spring.core.repository.ProductRepository;
+import programmerzamannow.spring.core.service.CategoryService;
+import programmerzamannow.spring.core.service.CustomerService;
+import programmerzamannow.spring.core.service.ProductService;
 
 public class ComponentTest {
 

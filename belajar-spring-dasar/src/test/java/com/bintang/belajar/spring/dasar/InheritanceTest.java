@@ -6,8 +6,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import com.bintang.belajar.spring.dasar.service.MerchantService;
-import com.bintang.belajar.spring.dasar.service.MerchantServiceImpl;
+import programmerzamannow.spring.core.service.MerchantService;
+import programmerzamannow.spring.core.service.MerchantServiceImpl;
 
 public class InheritanceTest {
 
