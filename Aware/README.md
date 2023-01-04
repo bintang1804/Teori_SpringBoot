@@ -22,4 +22,9 @@
 
 * Code : Aware
 
+![Img 1](image/aware.png)
+
+
 * Kode : Mengakses Bean
+
+![Img 1](image/awareTest.PNG)
