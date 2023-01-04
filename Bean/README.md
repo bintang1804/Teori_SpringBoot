@@ -33,7 +33,8 @@ Membuat Bean
 * Dengan memilih salah satunya menjadi primary, secara otomatis jika kita mengakses bean tanpa menyebutkan nama bean nya, secara otomatis primary nya yang akan dipilih
 * Untuk memilih primary bean, kita bisa tambahkan annotaiton @Primary
 * Kode : Primary Bean
- ![Img 1](image/BeanPrimary.PNG)
+
+![Img 1](image/BeanPrimary.PNG)
 
  
 * Kode : Mengakses Primary Bean
@@ -46,7 +47,8 @@ Membuat Bean
 * Jika kita ingin mengubah nama bean, kita bisa menggunakan method value() milik annotation 
 @Bean
 * Kode : Mengubah Nama Bean
- ![Img 1](image/BeanChangeName.PNG)
+
+![Img 1](image/BeanChangeName.PNG)
  
 * Kode : Mengakses Bean
  
