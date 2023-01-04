@@ -51,6 +51,8 @@ Membuat Bean
 ![Img 1](image/BeanChangeName.PNG)
  
 * Kode : Mengakses Bean
+
+![Img 1](image/aksesBean.PNG)
  
 
 
@@ -62,12 +64,20 @@ Membuat Bean
 * Atau di Spring, kita juga bisa menggunakan @Component, namun kita perlu wrap dalam class Factory Bean
 * [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/FactoryBean.html] 
 * Kode : Payment Gateway Client
+
+![Img 1](image/BeanGateway.PNG)
  
 * Kode : Factory Bean
  
+![Img 1](image/BeanFactory.PNG)
+
 * Kode : Configuration
+
+![Img 1](image/configuration.PNG)
  
 * Kode : Mengakses Bean
+
+![Img 1](image/BeanAkses.PNG)
  
  
  
@@ -86,6 +96,8 @@ Membuat Bean
 * Application Context juga merupakan turunan dari interface Listable Bean Factory
 * [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/ListableBeanFactory.html]
 * Kode : Menggunakan Listable Bean Factory
+
+![Img 1](image/BeanListlable.PNG)
  
  
 ### Bean Post Processor
@@ -99,14 +111,22 @@ Membuat Bean
 * Dimana kita akan membuat sebuah interface bernama IdAware, lalu memiliki method setId(String)
 * Kita akan membuat Bean Post Processor, dimana jika bean nya implements IdAware, kita akan setId(String) nya menggunakan UUID
 * Kode : IdAware Interface
+
+![Img 1](image/BeanId.PNG)
  
 * Kode : Bean Post Processor
+
+![Img 1](image/BeanPost.PNG)
  
 * Kode : Component
+
+![Img 1](image/BeanComponent.PNG)
  
 * Kode : Mengakses Bean
- 
- 
+
+![Img 1](image/BeanAkses2.PNG)
+
+
  
  
  
@@ -118,7 +138,11 @@ Membuat Bean
 * [https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/support/]BeanDefinitionRegistryPostProcessor.html 
 * Kode : Bean Factory Post Processor
  
+![Img 1](image/BeanFactoryPostProcessor.PNG)
+
 * Kode : Mengakses Bean
+
+![Img 1](image/BeanAkses3.PNG)
  
 ### Link Video Youtube
 #### (TUTORIAL SPRING BOOT DASAR)
